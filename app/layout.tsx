@@ -28,9 +28,9 @@ export default function RootLayout({
         <GoogleAnalytics
           GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
         />
-        <body className="min-h-screen scroll-smooth">
+        <body className="min-h-screen bg-background antialiased">
           <StickyBanner />
-          <main className="h-full flex w-full flex-col">{children}</main>
+          <main>{children}</main>
           <Toaster />
         </body>
       </html>

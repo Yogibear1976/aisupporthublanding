@@ -79,14 +79,21 @@ export const FaqsSection = () => {
           </p>
         </div>
         {/* Accordion Section - Centered */}
-        <div className="w-full">
-          <Accordion type="single" collapsible className="w-full">
+        <div className="mx-auto w-full max-w-2xl">
+          <p className="text-red-500 text-xl mb-4">
+            FAQ SECTION RENDERING - {FAQList.length} items
+          </p>
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {FAQList.map(({ question, answer, value }: FAQProps) => (
-              <AccordionItem key={value} value={value}>
-                <AccordionTrigger className="text-base sm:text-lg font-medium text-left">
+              <AccordionItem
+                key={value}
+                value={value}
+                className="border border-foreground/30 rounded-lg px-6 overflow-hidden"
+              >
+                <AccordionTrigger className="text-sm sm:text-base font-light text-left hover:no-underline py-4">
                   {question}
                 </AccordionTrigger>
-                <AccordionContent className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <AccordionContent className="text-xs sm:text-sm font-extralight text-gray pb-4">
                   {answer}
                 </AccordionContent>
               </AccordionItem>
