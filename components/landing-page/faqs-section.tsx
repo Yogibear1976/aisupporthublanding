@@ -80,9 +80,6 @@ export const FaqsSection = () => {
         </div>
         {/* Accordion Section - Centered */}
         <div className="mx-auto w-full max-w-2xl">
-          <p className="text-red-500 text-xl mb-4">
-            FAQ SECTION RENDERING - {FAQList.length} items
-          </p>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {FAQList.map(({ question, answer, value }: FAQProps) => (
               <AccordionItem
