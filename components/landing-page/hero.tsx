@@ -75,7 +75,7 @@ export const Hero = () => {
         {/* Background interface image */}
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden z-0 px-5">
           <Image
-            src="/landing/hero/dashboard_black.avif"
+            src="/landing/hero/dashboard_black.png"
             alt=""
             fill
             className="object-cover"
