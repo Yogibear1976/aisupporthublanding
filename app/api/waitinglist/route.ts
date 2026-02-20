@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { mailer } from "@/lib/mailer";
 import waitinglistTemplate from "@/components/templates/waitinglist-template";
 import { prisma } from "@/lib/prisma";
-import { Role } from "@prisma/client";
+// import type { Role } from "@prisma/client";
+
+type Role = "COMPANY" | "PROFESSIONAL";
 
 interface WaitingListRequest {
   role: Role;

@@ -1,6 +1,7 @@
 import { walsheimPro } from "@/lib/font";
 import { StickyBanner } from "@/components/ui/sticky-banner";
 import { Toaster } from "@/components/ui/sonner";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 import "./globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" suppressHydrationWarning className={walsheimPro.className}>
+      <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID as string} />
       <body className="min-h-screen scroll-smooth">
         <StickyBanner />
         <main className="h-full flex w-full flex-col">{children}</main>

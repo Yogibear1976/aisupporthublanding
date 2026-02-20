@@ -89,7 +89,7 @@ export const ModalWaitinglist = ({
 
   const formSchema = z
     .object({
-      role: z.enum(["bedrijf", "professional"], {
+      role: z.enum(["COMPANY", "PROFESSIONAL"], {
         message: "Selecteer een rol",
       }),
       name: z.string().min(2, "Naam is verplicht"),
@@ -98,7 +98,7 @@ export const ModalWaitinglist = ({
       skills: z.array(z.string()).optional(),
     })
     .superRefine((data, ctx) => {
-      if (data.role === "bedrijf" && !data.companyName) {
+      if (data.role === "COMPANY" && !data.companyName) {
         ctx.addIssue({
           code: "custom",
           message: "Bedrijfsnaam is verplicht",
@@ -106,7 +106,7 @@ export const ModalWaitinglist = ({
         });
       }
       if (
-        data.role === "professional" &&
+        data.role === "PROFESSIONAL" &&
         (!data.skills || data.skills.length === 0)
       ) {
         ctx.addIssue({
@@ -224,8 +224,8 @@ export const ModalWaitinglist = ({
                         </SelectTrigger>
                         <SelectContent>
                           <SelectGroup>
-                            <SelectItem value="bedrijf">Bedrijf</SelectItem>
-                            <SelectItem value="professional">
+                            <SelectItem value="COMPANY">Bedrijf</SelectItem>
+                            <SelectItem value="PROFESSIONAL">
                               AI Professional
                             </SelectItem>
                           </SelectGroup>
@@ -238,7 +238,7 @@ export const ModalWaitinglist = ({
               />
 
               {/* Conditional: Bedrijfsnaam (only for bedrijf) */}
-              {form.watch("role") === "bedrijf" && (
+              {form.watch("role") === "COMPANY" && (
                 <FormField
                   control={form.control}
                   name="companyName"
@@ -257,7 +257,7 @@ export const ModalWaitinglist = ({
               )}
 
               {/* Conditional: Skills (only for professional) */}
-              {form.watch("role") === "professional" && (
+              {form.watch("role") === "PROFESSIONAL" && (
                 <FormField
                   control={form.control}
                   name="skills"
