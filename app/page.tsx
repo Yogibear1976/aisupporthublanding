@@ -11,7 +11,7 @@ import { Testimonial } from "@/components/landing-page/testimonial";
 export const metadata: Metadata = {
   title: {
     default:
-      "AI Support Hub | Vind binnen 48 uur de juiste AI engineer. Voor 45% minder",
+      "AI Support Hub | AI Developer Inhuren? Pre-screened Talent | 45% Goedkoper",
     template: "%s | aisupporthub.nl",
   },
   metadataBase: new URL("https://www.aisupporthub.nl/"),
@@ -22,16 +22,16 @@ export const metadata: Metadata = {
     },
   },
   description:
-    "Wij koppelen jouw AI-project aan pre-screened Nederlandse engineers in kostenefficiënte regio's",
+    "Vind binnen 48 uur pre-screened Nederlandse AI engineers. Remote, kostenefficiënt (45% besparing) en direct beschikbaar. Van fullstack AI tot ML specialisten. ✓ MKB ✓ Pre-screened ✓ Nederlands",
   openGraph: {
     title:
-      "AI Support Hub | Vind binnen 48 uur de juiste AI engineer. Voor 45% minder",
+      "AI Support Hub | AI Developer Inhuren? Pre-screened Talent | 45% Goedkoper",
     description:
-      "Wij koppelen jouw AI-project aan pre-screened Nederlandse engineers in kostenefficiënte regio's",
+      "Vind binnen 48 uur pre-screened Nederlandse AI engineers. Remote, kostenefficiënt (45% besparing) en direct beschikbaar. Van fullstack AI tot ML specialisten. ✓ MKB ✓ Pre-screened ✓ Nederlands",
     url: "https://www.aisupporthub.nl",
     images: "/socials/aisupporthub_social.png",
     siteName:
-      "AI Support Hub | Vind binnen 48 uur de juiste AI engineer. Voor 45% minder",
+      "AI Support Hub | AI Developer Inhuren? Pre-screened Talent | 45% Goedkoper",
     type: "website",
     locale: "nl_NL",
   },
@@ -40,7 +40,18 @@ export const metadata: Metadata = {
     shortcut: "/icon/favicon.ico",
     apple: "/icon/apple-icon.png",
   },
-  keywords: [""],
+  keywords: [
+    "AI developer inhuren Nederland",
+    "Nederlandse AI engineer remote",
+    "Fullstack AI developer",
+    "AI consultant MKB",
+    "Betaalbare AI ontwikkeling",
+    "Pre-screened AI talent",
+    "AI engineer binnen 48 uur",
+    "Machine learning specialist Nederland",
+    "AI automation engineer",
+    "Remote AI developer kostenefficiënt",
+  ],
   robots: {
     index: true,
     follow: true,
