@@ -181,21 +181,21 @@ export const ModalWaitinglist = ({
         {/* HEADER */}
         <DialogHeader className="p-4 sm:p-6 pb-2">
           <DialogTitle className="text-left">
-            Claim jouw early adopter voordeel
+            Registreer voor voordeel!
           </DialogTitle>
 
           <DialogDescription className="text-left">
             De eerste 5 geregistreerde bedrijven krijgen na livegang ons{" "}
-            <span className="font-bold text-primary-light">
+            <span className="font-medium text-primary-light">
               laagste uurtarief
             </span>
             . Toegang tot pre-screened AI engineers die binnen 48 uur starten.
             Bespaar direct 45% op je projectkosten.
           </DialogDescription>
 
-          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+          <div className="flex text-left gap-1 text-xs text-muted-foreground">
             <Icons.email className="h-3.5 w-3.5 text-primary-light" />
-            <p className="text-[11px]">
+            <p className="text-[10px]">
               Je ontvangt direct een bevestiging van inschrijving op je mail.
             </p>
           </div>

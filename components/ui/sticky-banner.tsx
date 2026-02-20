@@ -92,7 +92,7 @@ export const StickyBanner = () => {
       <div className="mx-auto px-4 h-full max-w-7xl flex items-center justify-between">
         <div className="flex flex-wrap items-center gap-2 max-w-[90%] text-[10px] sm:text-xs text-foreground">
           <Rocket className="h-3 w-3 sm:h-4 sm:w-4 shrink-0" />
-          <p className="drop-shadow-md whitespace-nowrap">Launch over:</p>
+          <p className="drop-shadow-md whitespace-nowrap">Livegang:</p>
 
           {/* Countdown */}
           <div className="flex items-center gap-1 font-mono font-semibold">
@@ -110,7 +110,7 @@ export const StickyBanner = () => {
           <Link href={siteConfig.links.whatsapp} target="_blank">
             <button className="flex items-center gap-1 font-medium text-[10px] sm:text-xs underline underline-offset-4 decoration-foreground/0 hover:decoration-foreground cursor-pointer transition-colors duration-200 whitespace-nowrap">
               <Icons.whatsapp className="h-3 w-3 sm:h-4 sm:w-4" />
-              WhatsApp ons
+              WhatsApp
             </button>
           </Link>
         </div>

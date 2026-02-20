@@ -52,7 +52,7 @@ export const Hero = () => {
         </h1>
 
         {/* Subtext */}
-        <p className="font-light tracking-wide text-sm sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-sm md:max-w-xl">
+        <p className="font-light leading-7 tracking-wide text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-sm md:max-w-xl">
           Pre-screened Nederlandse AI-engineers voor jouw project.
           Kostenefficiënt en remote.
         </p>

@@ -128,13 +128,14 @@ export const ProblemSection = () => {
             </div>
           </div>
 
-          {/* Center Image - Fixed position on desktop */}
-          <div className="relative rounded-2xl border border-foreground/30 bg-background p-2 mx-auto lg:mx-0">
-            <div className="relative w-85 h-137 rounded-lg overflow-hidden">
+          {/* Center Image - Larger on mobile */}
+          <div className="relative rounded-2xl border border-foreground/30 bg-background p-2 mx-auto w-fit">
+            <div className="relative w-72 h-115 sm:w-80 sm:h-128 lg:w-85 lg:h-137 rounded-lg overflow-hidden">
               <Image
                 src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771151874/Thoughtful_Young_Man_with_Glasses_and_Patterned_Shirt_pdbrwg.png"
                 alt="Project thumbnail"
                 fill
+                sizes="(max-width: 640px) 288px, (max-width: 1024px) 320px, 340px"
                 className="object-cover"
                 priority
               />
