@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { DotsOverlay } from "@/components/dots/dots-overlay";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, CheckCheck } from "lucide-react";
 import { ModalWaitinglist } from "@/components/modals/modal-waitinglist";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
@@ -56,19 +56,19 @@ export const Hero = () => {
 
         {/* Subtext */}
         <p className="font-medium leading-6 sm:leading-7 text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-sm md:max-w-xl">
-          Pre-screened Nederlands AI talent voor jouw project. Kostenefficiënt
-          en remote.
+          Direct inzetbaar, pre-screened Nederlands AI-talent. Tot 45%
+          kostenefficiënter en remote beschikbaar.
         </p>
 
         <div className="flex flex-wrap items-center gap-2 sm:gap-4 md:gap-6 justify-center">
           <div className="flex items-center gap-1">
-            <Check className="shrink-0 text-primary-light h-5 w-5 sm:h-6 sm:w-6" />
+            <CheckCheck className="shrink-0 text-nature h-5 w-5 sm:h-6 sm:w-6" />
             <p className="text-xs sm:text-sm font-bold whitespace-nowrap text-gray tracking-tight">
               Binnen 48 uur 3 geschikte freelancers
             </p>
           </div>
           <div className="flex items-center gap-1">
-            <Check className="shrink-0 text-primary-light h-5 w-5 sm:h-6 sm:w-6" />
+            <CheckCheck className="shrink-0 text-nature h-5 w-5 sm:h-6 sm:w-6" />
             <p className="text-xs sm:text-sm font-bold whitespace-nowrap text-gray tracking-tight">
               Geen match, geen kosten!
             </p>
