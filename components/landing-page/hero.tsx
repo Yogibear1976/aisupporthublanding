@@ -6,6 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { DotsOverlay } from "@/components/dots/dots-overlay";
 import { ArrowRight, ClipboardPen } from "lucide-react";
 import { ModalWaitinglist } from "@/components/modals/modal-waitinglist";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+import { Icons } from "@/components/icons/Icons";
 
 export const Hero = () => {
   return (
@@ -52,18 +55,29 @@ export const Hero = () => {
         </h1>
 
         {/* Subtext */}
-        <p className="font-light leading-7 tracking-wide text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-sm md:max-w-xl">
+        <p className="font-medium leading-6 sm:leading-7 text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-sm md:max-w-xl">
           Pre-screened Nederlandse AI-engineers voor jouw project.
           Kostenefficiënt en remote.
         </p>
 
-        <p className="text-xs sm:text-sm md:text-base text-gray font-light mx-auto max-w-lg">
-          Launch aanbieding: Eerste 5 geregistreerde bedrijven betalen het
-          laagste uurtarief.
+        <p className="text-sm sm:text-base md:text-base text-gray font-normal mx-auto max-w-sm md:max-w-lg">
+          Launch aanbieding: Eerste{" "}
+          <span className="font-medium text-primary-light">5</span>{" "}
+          geregistreerde bedrijven betalen het laagste uurtarief.
         </p>
 
-        {/* Modal Waiting list */}
-        <ModalWaitinglist title="Reserveer mijn plek" />
+        {/* Buttons */}
+        <div className="flex gap-4 mt-4">
+          {/* Modal Waiting list */}
+          <ModalWaitinglist title="Reserveer mijn plek" />
+          <Link href={siteConfig.links.whatsapp} target="_blank">
+            {" "}
+            <Button variant="outline">
+              <Icons.whatsapp className="text-nature" />
+              WhatsApp
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Dotted overlay */}

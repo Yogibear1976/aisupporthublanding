@@ -87,10 +87,10 @@ export const FaqsSection = () => {
                 value={value}
                 className="border border-foreground/30 rounded-lg px-6 overflow-hidden"
               >
-                <AccordionTrigger className="text-sm sm:text-base font-light text-left hover:no-underline py-4">
+                <AccordionTrigger className="text-sm sm:text-base font-normal text-left hover:no-underline py-4">
                   {question}
                 </AccordionTrigger>
-                <AccordionContent className="text-xs sm:text-sm font-extralight text-gray pb-4">
+                <AccordionContent className="text-xs sm:text-sm font-light text-gray pb-4">
                   {answer}
                 </AccordionContent>
               </AccordionItem>

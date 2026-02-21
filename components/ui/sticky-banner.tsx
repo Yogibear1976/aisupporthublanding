@@ -106,13 +106,6 @@ export const StickyBanner = () => {
             <span>:</span>
             <span>{timeLeft.seconds}s</span>
           </div>
-
-          <Link href={siteConfig.links.whatsapp} target="_blank">
-            <button className="flex items-center gap-1 font-medium text-[10px] sm:text-xs underline underline-offset-4 decoration-foreground/0 hover:decoration-foreground cursor-pointer transition-colors duration-200 whitespace-nowrap">
-              <Icons.whatsapp className="h-3 w-3 sm:h-4 sm:w-4" />
-              WhatsApp
-            </button>
-          </Link>
         </div>
         <Button
           variant="ghost"
