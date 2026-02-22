@@ -7,9 +7,9 @@ import { useEffect } from "react";
 import { pageview } from "@/lib/gtaghelper";
 
 export const GoogleTagManager = ({
-  GTM_TRACKING_ID,
+  GA_TRACKING_ID,
 }: {
-  GTM_TRACKING_ID: string;
+  GA_TRACKING_ID: string;
 }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -17,13 +17,13 @@ export const GoogleTagManager = ({
   useEffect(() => {
     const url = pathname + searchParams.toString();
 
-    pageview(GTM_TRACKING_ID, url);
-  }, [pathname, searchParams, GTM_TRACKING_ID]);
+    pageview(GA_TRACKING_ID, url);
+  }, [pathname, searchParams, GA_TRACKING_ID]);
 
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GTM_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
         strategy="afterInteractive"
       />
       <Script
@@ -36,13 +36,13 @@ export const GoogleTagManager = ({
             gtag('js', new Date());
 
             gtag('consent', 'default', {
-                'analytics_storage': 'denied'
+                'analytics_storage': 'granted'
             });
-                
-            gtag('config', '${GTM_TRACKING_ID}', {
-                page_path: window.location.pathname,
+
+            gtag('config', '${GA_TRACKING_ID}', {
+                page_path: window.location.pathname
             });
-            `,
+          `,
         }}
       />
     </>
