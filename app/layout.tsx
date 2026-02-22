@@ -27,7 +27,7 @@ export default function RootLayout({
         className={walsheimPro.className}
       >
         <GoogleTagManager
-          GTM_TRACKING_ID={process.env.GTM_TRACKING_ID as string}
+          GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
         />
         <body className="min-h-screen bg-background antialiased">
           <StickyBanner />

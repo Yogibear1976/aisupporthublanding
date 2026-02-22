@@ -1,3 +1,5 @@
+// 'analytics_storage': 'granted' for Google Tag Only
+
 "use client";
 
 import Script from "next/script";
