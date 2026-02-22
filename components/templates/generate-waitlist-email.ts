@@ -11,11 +11,11 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
   // Bepaal role-specifieke tekst
   const roleText =
     role === "PROFESSIONAL"
-      ? "AI engineer"
-      : `bedrijf <span style="font-weight: 400; color: #0891B2;">${companyName}</span>`;
+      ? `<span style="font-weight: 400; color: #6B7280;">AI professional</span>`
+      : `bedrijf <span style="font-weight: 400; color: #6B7280;">${companyName}</span>`;
 
   const roleDisplayName =
-    role === "PROFESSIONAL" ? "AI Professional" : "Bedrijf";
+    role === "PROFESSIONAL" ? "AI professional" : "Bedrijf";
 
   const companyRow =
     role === "COMPANY" && companyName
@@ -34,7 +34,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkbits.io quotation request</title>
+    <title>AI Support Hub - Wachtlijst Bevestiging</title>
     <style>
         /* latin */
         @font-face {
@@ -166,7 +166,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
     
     <!-- TOP BORDER -->
                 <tr>
-                    <td height="6" style="background-color: #0891B2;"></td>
+                    <td height="6" style="background-color: #51A2FF;"></td>
                 </tr>
     
     
@@ -174,7 +174,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
                 <tr>
                     <td>
                         <a href="https://www.aisupporthub.nl">
-                            <img src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1768657492/banner_email_zgc8yg.jpg" alt="banner contact" width="600" style="max-width: 100%;">
+                            <img src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771770771/banner_email_gnn0iz.png" alt="banner waitinglist" width="600" style="max-width: 100%;">
                         </a>
                     </td>
                 </tr>
@@ -189,7 +189,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
                                     <p style="font-size: 15px; font-weight: 300;">Beste <span style="font-weight: 400;">${name}</span>,</p>
                                     
                                     <p style="font-size: 15px; font-weight: 300; line-height: 21px; padding: 0 0 5px;">
-                                        Dank je wel voor je inschrijving op de wachtlijst als ${roleText}! Ik kom <span style="font-weight: 400;">snel</span> persoonlijk bij je terug op <span style="font-weight: 400; color: #0891B2;">${email}</span>.
+                                        Dank je wel voor je inschrijving op de wachtlijst als ${roleText}! Ik kom <span style="font-weight: 400;">zo snel mogelijk</span> persoonlijk bij je terug op <span style="font-weight: 400; color: #0891B2;">${email}</span>.
                                     </p>
 
                                     <table style="width: 100%; font-size: 14px; font-weight: 300; line-height: 20px; margin: 10px 0 20px 0;">
@@ -212,23 +212,25 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
                                         Met vriendelijke groet,
                                     </p>
 
-                                    <p style="font-size: 15px; font-weight: 400; line-height: 16px; padding: 20px 0 5px; margin-bottom: 5px;">
+                                    <p style="font-size: 13px; font-weight: 400; line-height: 16px; padding: 8px 0 2px; margin: 0;">
                                         Jochgem van Delft<br>
-                                        <span style="font-size: 10px; font-weight: 300; color: #6B7280;">Owner</span>
+                                        <span style="font-size: 10px; font-weight: 300; color: #6B7280; font-style: italic;">
+                                            Owner
+                                        </span>
                                     </p>
 
                                     <a href="https://www.aisupporthub.nl">
                                         <img 
-                                            src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1768644302/linkbits-logo_vnnjp4.svg" 
+                                            src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771770105/aish_logo_dild8a.svg" 
                                             alt="AI Support Hub Logo" 
-                                            width="120" 
+                                            width="180" 
                                             title="AI Support Hub"
                                             style="margin: 2px 0;"
                                         >
                                     </a>
 
                                     <!-- Footer -->
-                                    <p style="font-size: 10px; font-weight: 300; line-height: 14px; padding: 20px 0 0 0; margin: 20px 0 0 0; border-top: 1px solid #E5E7EB; color: #9CA3AF;">
+                                    <p style="font-size: 8px; font-weight: 300; line-height: 10px; padding: 20px 0 0 0; margin: 20px 0 0 0; border-top: 1px solid #E5E7EB; color: #9CA3AF;">
                                         De informatie verzonden in dit e-mailbericht is vertrouwelijk en is uitsluitend bestemd voor de geadresseerde. Openbaarmaking, vermenigvuldiging,
                                         verspreiding en/of verstrekking van deze informatie aan derden is, behoudens voorafgaande schriftelijke toestemming van AISupportHub.nl, niet toegestaan.
                                         AISupportHub.nl staat niet in voor de juiste en volledige overbrenging van de inhoud van een verzonden e-mailbericht, noch voor tijdige ontvangst daarvan.
@@ -247,7 +249,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
     
     <!-- BLUE BORDER -->
                 <tr>
-                    <td height="6" style="background-color: #0891B2;"></td>
+                    <td height="6" style="background-color: #51A2FF;"></td>
                 </tr>
     
             </table>

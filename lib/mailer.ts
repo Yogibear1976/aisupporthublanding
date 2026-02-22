@@ -31,7 +31,7 @@ export const mailer = async (
 
   await transporter
     .sendMail({
-      from: '"AI Support Hub | Pre-screened Nederlandse AI-engineers voor jouw project." <noreply@linkbits.io>',
+      from: '"AI Support Hub" <noreply@linkbits.io>',
       to,
       bcc,
       subject,
