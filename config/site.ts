@@ -10,7 +10,7 @@ export const siteConfig = {
     mobilePhone: "tel:+31627330867",
     facebook: "https://www.facebook.com/xxx",
     youtube: "https://www.youtube.com/@xxxxx",
-    linkedin: "https://www.linkedin.com/company/xxxxxxx",
+    linkedin: "https://www.linkedin.com/company/ai-support-hub/",
   },
 };
 

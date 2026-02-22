@@ -11,8 +11,8 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
   // Bepaal role-specifieke tekst
   const roleText =
     role === "PROFESSIONAL"
-      ? `<span style="font-weight: 400; color: #6B7280;">AI professional</span>`
-      : `bedrijf <span style="font-weight: 400; color: #6B7280;">${companyName}</span>`;
+      ? `<span style="font-weight: 400;">AI professional</span>`
+      : `bedrijf <span style="font-weight: 400;">${companyName}</span>`;
 
   const roleDisplayName =
     role === "PROFESSIONAL" ? "AI professional" : "Bedrijf";
@@ -189,7 +189,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
                                     <p style="font-size: 15px; font-weight: 300;">Beste <span style="font-weight: 400;">${name}</span>,</p>
                                     
                                     <p style="font-size: 15px; font-weight: 300; line-height: 21px; padding: 0 0 5px;">
-                                        Dank je wel voor je inschrijving op de wachtlijst als ${roleText}! Ik kom <span style="font-weight: 400;">zo snel mogelijk</span> persoonlijk bij je terug op <span style="font-weight: 400; color: #0891B2;">${email}</span>.
+                                        Dank je wel voor je inschrijving op de wachtlijst als ${roleText}. Ik kom <span style="font-weight: 400;">zo snel mogelijk</span> persoonlijk bij je terug op <span style="font-weight: 400; color: #0891B2;">${email}</span>.
                                     </p>
 
                                     <table style="width: 100%; font-size: 14px; font-weight: 300; line-height: 20px; margin: 10px 0 20px 0;">
@@ -223,7 +223,7 @@ export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
                                         <img 
                                             src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771770105/aish_logo_dild8a.svg" 
                                             alt="AI Support Hub Logo" 
-                                            width="180" 
+                                            width="120" 
                                             title="AI Support Hub"
                                             style="margin: 2px 0;"
                                         >
