@@ -1,5 +1,33 @@
-const waitinglistTemplate = function (name: string, email: string) {
-  const html = `
+interface WaitlistEmailData {
+  name: string;
+  email: string;
+  role: "PROFESSIONAL" | "COMPANY";
+  companyName?: string;
+}
+
+export const generateWaitlistEmail = (data: WaitlistEmailData): string => {
+  const { name, email, role, companyName } = data;
+
+  // Bepaal role-specifieke tekst
+  const roleText =
+    role === "PROFESSIONAL"
+      ? "AI engineer"
+      : `bedrijf <span style="font-weight: 400; color: #0891B2;">${companyName}</span>`;
+
+  const roleDisplayName =
+    role === "PROFESSIONAL" ? "AI Professional" : "Bedrijf";
+
+  const companyRow =
+    role === "COMPANY" && companyName
+      ? `
+    <tr>
+      <td style="padding: 3px 0; width: 120px; color: #6B7280;">Bedrijfsnaam:</td>
+      <td style="padding: 3px 0;">${companyName}</td>
+    </tr>
+  `
+      : "";
+
+  return `
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -157,35 +185,21 @@ const waitinglistTemplate = function (name: string, email: string) {
                     <td style="padding: 5px 0 0;">
                         <table width="100%">
                             <tr>
-                                <td style="text-align: left; padding: 15px;">
+                                 <td style="text-align: left; padding: 15px;">
                                     <p style="font-size: 15px; font-weight: 300;">Beste <span style="font-weight: 400;">${name}</span>,</p>
                                     
                                     <p style="font-size: 15px; font-weight: 300; line-height: 21px; padding: 0 0 5px;">
-                                        Dank je wel voor je inschrijving op de wachtlijst! Ik kom <span style="font-weight: 400;">snel</span> persoonlijk bij je terug op <span style="font-weight: 400; color: #0891B2;">${email}</span>.
-                                    </p>
-
-                                    <!-- Confirmation Box -->
-                                    <div style="background: #F0F9FF; border-left: 4px solid #0891B2; padding: 20px; margin: 20px 0; border-radius: 4px;">
-                                        <h3 style="font-size: 16px; font-weight: 600; color: #0891B2; margin: 0 0 10px 0;">Je inschrijving is ontvangen</h3>
-                                        <p style="font-size: 14px; font-weight: 300; line-height: 20px; margin: 0; color: #374151;">
-                                            Ik neem zo snel mogelijk contact met je op, meestal binnen enkele uren.
-                                        </p>
-                                    </div>
-
-                                    <p style="font-size: 15px; font-weight: 300; line-height: 21px; padding: 0 0 5px;">
-                                        Mijn naam is Jochgem van Delft, eigenaar van <span style="font-weight: 400; color: #0891B2;">AI Support Hub</span>. Wij koppelen jouw AI-project aan pre-screened Nederlandse engineers in kostenefficiënte regio.
-                                    </p>
-
-                                    <!-- Divider -->
-                                    <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 30px 0;">
-
-                                    <p style="font-size: 15px; font-weight: 300; line-height: 21px; padding: 0 0 5px;">
-                                        <span style="font-weight: 400;">Je hebt de volgende informatie verstuurd:</span>
+                                        Dank je wel voor je inschrijving op de wachtlijst als ${roleText}! Ik kom <span style="font-weight: 400;">snel</span> persoonlijk bij je terug op <span style="font-weight: 400; color: #0891B2;">${email}</span>.
                                     </p>
 
                                     <table style="width: 100%; font-size: 14px; font-weight: 300; line-height: 20px; margin: 10px 0 20px 0;">
                                         <tr>
-                                            <td style="padding: 3px 0; width: 100px; color: #6B7280;">Naam:</td>
+                                            <td style="padding: 3px 0; width: 120px; color: #6B7280;">Rol:</td>
+                                            <td style="padding: 3px 0;">${roleDisplayName}</td>
+                                        </tr>
+                                        ${companyRow}
+                                        <tr>
+                                            <td style="padding: 3px 0; color: #6B7280;">Naam:</td>
                                             <td style="padding: 3px 0;">${name}</td>
                                         </tr>
                                         <tr>
@@ -241,13 +255,4 @@ const waitinglistTemplate = function (name: string, email: string) {
     
     </body>
     </html>`;
-  const text = `
-        Waitinglist inschrijving aisupporthub.nl.
-        Als je dit verzoek niet hebt verstuurd, neem dan alstublieft onmiddellijk contact met me op via 06 27 330 867 of info@linkbits.io om eventuele misverstanden of ongeautoriseerde verzoeken te verifiëren.`;
-  return {
-    html: html,
-    text: text,
-  };
 };
-
-export default waitinglistTemplate;
