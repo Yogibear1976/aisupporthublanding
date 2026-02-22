@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "prisma": {
+    "binaryTargets": [
+      "native",
+      "debian-openssl-3.0-x64"
+    ],
     "generate": "prisma generate"
   },
   "scripts": {
