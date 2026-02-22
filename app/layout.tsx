@@ -14,13 +14,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" suppressHydrationWarning className={walsheimPro.className}>
-      <GoogleTagManager GA_TRACKING_ID={process.env.GA_TRACKING_ID as string} />
-      <body className="min-h-screen bg-background antialiased">
-        <StickyBanner />
-        <main>{children}</main>
-        <Toaster />
-      </body>
-    </html>
+    <Suspense fallback={<>...</>}>
+      <html
+        lang="nl"
+        suppressHydrationWarning
+        className={walsheimPro.className}
+      >
+        <GoogleTagManager
+          GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
+        />
+        <body className="min-h-screen bg-background antialiased">
+          <StickyBanner />
+          <main>{children}</main>
+          <Toaster />
+        </body>
+      </html>
+    </Suspense>
   );
 }
