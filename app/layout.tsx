@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import "./globals.css";
 
 import type { Metadata } from "next";
+import { GoogleTagManager } from "@/components/analytics/google-tag";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,8 +26,8 @@ export default function RootLayout({
         suppressHydrationWarning
         className={walsheimPro.className}
       >
-        <GoogleAnalytics
-          GA_TRACKING_ID={process.env.GA_TRACKING_ID as string}
+        <GoogleTagManager
+          GTM_TRACKING_ID={process.env.GTM_TRACKING_ID as string}
         />
         <body className="min-h-screen bg-background antialiased">
           <StickyBanner />
