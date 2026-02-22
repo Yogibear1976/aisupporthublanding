@@ -64,13 +64,13 @@ export const Hero = () => {
           <div className="flex items-center gap-1">
             <CheckCheck className="shrink-0 text-nature h-5 w-5 sm:h-6 sm:w-6" />
             <p className="text-xs sm:text-sm font-bold whitespace-nowrap text-gray tracking-tight">
-              Binnen 48 uur 3 geschikte freelancers
+              Binnen 48 uur 3 geschikte AI talenten
             </p>
           </div>
           <div className="flex items-center gap-1">
             <CheckCheck className="shrink-0 text-nature h-5 w-5 sm:h-6 sm:w-6" />
             <p className="text-xs sm:text-sm font-bold whitespace-nowrap text-gray tracking-tight">
-              Geen match, geen kosten!
+              Gratis voor freelancers!
             </p>
           </div>
         </div>

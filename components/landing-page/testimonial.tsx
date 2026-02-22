@@ -88,10 +88,10 @@ export const Testimonial = () => {
                 {/* Content on bottom */}
                 <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
                   <div className="space-y-1">
-                    <h2 className="text-4xl md:text-5xl font-normal text-white">
+                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground">
                       45%
                     </h2>
-                    <p className="text-sm md:text-base text-white/90">
+                    <p className="text-sm md:text-base text-foreground/90">
                       besparing
                     </p>
                   </div>
@@ -121,10 +121,10 @@ export const Testimonial = () => {
                 {/* Content on bottom */}
                 <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
                   <div className="space-y-1">
-                    <h2 className="text-4xl md:text-5xl font-normal text-white">
-                      45
+                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-primary-light">
+                      30
                     </h2>
-                    <p className="text-sm md:text-base text-white/90">
+                    <p className="text-sm md:text-base text-primary-light/90">
                       minuten Intake
                     </p>
                   </div>
@@ -140,7 +140,7 @@ export const Testimonial = () => {
                   <p className="font-light text-base italic">
                     &quot;Ik had genoeg van moeizame klantenacquisitie en
                     workflow challenges die me sterk demotiveerden. Bij AI
-                    Support Hub deed ik één grondige technische intake van 45
+                    Support Hub deed ik één grondige technische intake van 30
                     minuten waarin ik echt kon laten zien wat ik kan. Drie dagen
                     later startte ik al bij een Nederlandse scale-up aan een
                     computer vision project. Precies mijn specialisme. Geen
