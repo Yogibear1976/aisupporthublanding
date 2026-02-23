@@ -108,7 +108,7 @@ export const Testimonial = () => {
               <div className="relative h-auto min-h-50 lg:min-h-65 rounded-lg overflow-hidden">
                 {/* Background Image */}
                 <Image
-                  src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771332760/Modern_Workspace_Scene_dk4pqk.png"
+                  src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771839537/Modern_Office_Work_Environment_sg1kdf.png"
                   alt=""
                   fill
                   className="object-cover"
