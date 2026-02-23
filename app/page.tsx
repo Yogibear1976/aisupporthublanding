@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { Hero } from "@/components/landing-page/hero";
 import { ProblemSection } from "@/components/landing-page/problem-section";
-import { SolutionSection } from "@/components/landing-page/solution-section";
+import { SolutionProfessionalSection } from "@/components/landing-page/solution-prof-section";
 import { BenefitsSection } from "@/components/landing-page/benefits-section";
 import { FaqsSection } from "@/components/landing-page/faqs-section";
 import { BannerSection } from "@/components/landing-page/banner-section";
@@ -70,7 +70,7 @@ export default function Home() {
     <>
       <Hero />
       <ProblemSection />
-      <SolutionSection />
+      <SolutionProfessionalSection />
       <BenefitsSection />
       <Testimonial />
       <FaqsSection />
