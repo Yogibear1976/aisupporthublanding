@@ -104,8 +104,8 @@ export const Hero = () => {
         {/* Background interface image */}
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden z-0 px-5">
           <Image
-            src="/landing/hero/dashboard_black.png"
-            alt="Dashboard AI Support Hub Platform"
+            src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771928884/dashboard_ub4nta.png"
+            alt="dashboard ai support hub platform"
             fill
             className="object-cover"
             priority

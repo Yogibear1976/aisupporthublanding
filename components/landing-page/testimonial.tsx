@@ -121,10 +121,10 @@ export const Testimonial = () => {
                 {/* Content on bottom */}
                 <div className="absolute bottom-0 left-0 right-0 z-10 p-6">
                   <div className="space-y-1">
-                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-primary-light">
+                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-foreground">
                       30
                     </h2>
-                    <p className="text-sm md:text-base text-primary-light/90">
+                    <p className="text-sm md:text-base text-foreground/90">
                       minuten Intake
                     </p>
                   </div>
