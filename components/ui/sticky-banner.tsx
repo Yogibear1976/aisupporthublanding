@@ -95,7 +95,7 @@ export const StickyBanner = () => {
           <p className="drop-shadow-md whitespace-nowrap">Livegang:</p>
 
           {/* Countdown */}
-          <div className="flex items-center gap-1 font-mono font-semibold">
+          <div className="flex items-center gap-1 font-bold">
             <span>{timeLeft.months}m</span>
             <span>:</span>
             <span>{timeLeft.days}d</span>

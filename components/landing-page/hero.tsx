@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { X, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { DotsOverlay } from "@/components/dots/dots-overlay";
@@ -11,8 +13,47 @@ import Link from "next/link";
 import { Icons } from "@/components/icons/Icons";
 
 export const Hero = () => {
+  // Set your target date here (Q2 2026 launch - e.g., April 1, 2026)
+  const targetDate = new Date("2026-04-01T00:00:00").getTime();
+  const [timeLeft, setTimeLeft] = useState({
+    months: 0,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  // Countdown timer
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
+
+      if (difference > 0) {
+        const months = Math.floor(difference / (1000 * 60 * 60 * 24 * 30));
+        const days = Math.floor(
+          (difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24),
+        );
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60),
+        );
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        setTimeLeft({ months, days, hours, minutes, seconds });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000); // Update every second
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
   return (
-    <section className="relative flex flex-col items-center gap-20 w-full h-min pb-16 pt-16 sm:pt-20 md:pt-30 lg:pt-36 overflow-hidden px-4">
+    <section className="relative flex flex-col items-center gap-20 w-full h-min pb-16 pt-12 sm:pt-16 md:pt-20 lg:pt-26 overflow-hidden px-4">
       {/* Main content container */}
       <div className="relative z-10 flex flex-col items-center gap-8 w-full max-w-7xl h-min text-center">
         {/* Badge */}
@@ -75,10 +116,57 @@ export const Hero = () => {
           </div>
         </div>
 
+        <div className="flex items-center gap-2 font-mono mx-auto w-fit text-xs sm:text-sm">
+          <div className="flex flex-col items-center">
+            <span className="text-lg sm:text-xl font-bold text-foreground">
+              {timeLeft.months}
+            </span>
+            <span className="text-[9px] sm:text-[10px] text-primary-light uppercase tracking-wider">
+              mnd
+            </span>
+          </div>
+          <span className="text-muted-foreground">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-lg sm:text-xl font-bold text-foreground">
+              {timeLeft.days}
+            </span>
+            <span className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-wider">
+              dgn
+            </span>
+          </div>
+          <span className="text-muted-foreground">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-lg sm:text-xl font-bold text-foreground">
+              {timeLeft.hours}
+            </span>
+            <span className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-wider">
+              uur
+            </span>
+          </div>
+          <span className="text-muted-foreground">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-lg sm:text-xl font-bold text-foreground">
+              {timeLeft.minutes}
+            </span>
+            <span className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-wider">
+              min
+            </span>
+          </div>
+          <span className="text-muted-foreground">:</span>
+          <div className="flex flex-col items-center">
+            <span className="text-lg sm:text-xl font-bold text-foreground">
+              {timeLeft.seconds}
+            </span>
+            <span className="text-[9px] sm:text-[10px] text-muted-foreground uppercase tracking-wider">
+              sec
+            </span>
+          </div>
+        </div>
+
         <p className="text-sm sm:text-base md:text-base text-gray font-normal mx-auto max-w-sm md:max-w-lg">
           Launch aanbieding: Eerste{" "}
-          <span className="font-medium text-primary-light">5</span>{" "}
-          geregistreerde bedrijven betalen het laagste uurtarief. Reserveer
+          <span className="font-bold text-primary-light">5</span> geregistreerde
+          bedrijven betalen het laagste uurtarief de eerste maand. Reserveer
           gratis!
         </p>
 
