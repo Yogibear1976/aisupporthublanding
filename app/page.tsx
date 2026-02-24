@@ -7,6 +7,7 @@ import { BenefitsSection } from "@/components/landing-page/benefits-section";
 import { FaqsSection } from "@/components/landing-page/faqs-section";
 import { BannerSection } from "@/components/landing-page/banner-section";
 import { Testimonial } from "@/components/landing-page/testimonial";
+import { SolutionCompanySection } from "@/components/landing-page/solution-company-section";
 
 export const metadata: Metadata = {
   title: {
@@ -70,8 +71,9 @@ export default function Home() {
     <>
       <Hero />
       <ProblemSection />
-      <SolutionProfessionalSection />
+      <SolutionCompanySection />
       <BenefitsSection />
+      <SolutionProfessionalSection />
       <Testimonial />
       <FaqsSection />
       <BannerSection />
