@@ -170,7 +170,7 @@ export const ModalWaitinglist = ({
       </DialogTrigger>
 
       <DialogContent
-        className="
+        className="bg-card
       sm:max-w-106
       p-0
       max-h-[85dvh]
@@ -185,7 +185,7 @@ export const ModalWaitinglist = ({
           </DialogTitle>
 
           <DialogDescription className="text-left">
-            De eerste 5 geregistreerde bedrijven krijgen na livegang ons{" "}
+            De eerste 5 geregistreerde bedrijven krijgen na livegang 1 maand ons{" "}
             <span className="font-medium text-primary-light">
               laagste uurtarief
             </span>

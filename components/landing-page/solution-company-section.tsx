@@ -39,14 +39,14 @@ export const SolutionCompanySection = () => {
           {/* Card 1 */}
           <div className="relative col-span-1 md:col-span-2 lg:col-span-2 aspect-video md:aspect-auto rounded-2xl border border-foreground/30 bg-background overflow-hidden">
             <Image
-              src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771926811/onboarding_liuj72.png"
+              src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771958161/onboarding_liuj72_hejdkc.png"
               alt="Time to onboard"
               fill
               className="object-cover"
               priority
             />
             {/* Dark linear overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
             {/* Text overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h6 className="text-xl font-normal text-foreground tracking-wide">
@@ -105,14 +105,14 @@ export const SolutionCompanySection = () => {
           {/* Card 4 */}
           <div className="relative col-span-1 md:col-span-2 lg:col-span-2 aspect-video md:aspect-auto rounded-2xl border border-foreground/30 bg-background overflow-hidden">
             <Image
-              src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771926801/start_nwa5dp.png"
+              src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771958147/start_nwa5dp_mkgbvj.png"
               alt=""
               fill
               className="object-cover"
               priority
             />
             {/* Dark linear overlay */}
-            <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
             {/* Text overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
               <h6 className="text-xl font-normal text-foreground tracking-wide">
