@@ -99,10 +99,10 @@ export const Hero = () => {
       <DotsOverlay opacity={60} />
       <div
         id="Hero UI"
-        className="relative w-full max-w-7xl mx-auto flex items-start gap-4 bg-background rounded-2xl border border-foreground/30 overflow-visible"
+        className="relative w-full max-w-7xl mx-auto flex items-start gap-4 bg-background rounded-sm md:rounded-2xl border border-foreground/30 overflow-visible"
       >
         {/* Background interface image */}
-        <div className="relative w-full aspect-video rounded-2xl overflow-hidden z-0 px-5">
+        <div className="relative w-full aspect-video rounded-sm md:rounded-2xl overflow-hidden z-0 px-5">
           <Image
             src="https://res.cloudinary.com/dqvs8sk1o/image/upload/v1771928884/dashboard_ub4nta.png"
             alt="dashboard ai support hub platform"
