@@ -70,7 +70,7 @@ export const Hero = () => {
           <div className="flex items-center gap-1">
             <CheckCheck className="shrink-0 text-nature h-5 w-5 sm:h-6 sm:w-6" />
             <p className="text-xs sm:text-sm font-bold whitespace-nowrap text-gray tracking-tight">
-              Gratis voor freelancers!
+              Gratis voor zzp'ers & bedrijven
             </p>
           </div>
         </div>
