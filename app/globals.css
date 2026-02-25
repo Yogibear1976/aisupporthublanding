@@ -122,6 +122,22 @@
   --radius: 0.625rem;
 }
 
+/* Background Cards */
+
+.card {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      oklch(26% 0.04 269.667) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      oklch(22.045% 0.03051 269.667) 0%,
+      oklch(18% 0.02 269.667) 100%
+    );
+}
+
 /* Background Cookiebanner */
 
 .blue-glassmorphism {

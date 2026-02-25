@@ -170,7 +170,7 @@ export const ModalWaitinglist = ({
       </DialogTrigger>
 
       <DialogContent
-        className="bg-card
+        className="card
       sm:max-w-106
       p-0
       max-h-[85dvh]
