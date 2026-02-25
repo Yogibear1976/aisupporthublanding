@@ -125,17 +125,17 @@
 /* Background Cards */
 
 .card {
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      oklch(26% 0.04 269.667) 0%,
-      transparent 50%
-    ),
-    linear-gradient(
-      135deg,
-      oklch(22.045% 0.03051 269.667) 0%,
-      oklch(18% 0.02 269.667) 100%
-    );
+  background: radial-gradient(
+    ellipse 800px 600px at 85% 85%,
+    oklch(26% 0.02 269.667) 0%,
+    oklch(20% 0.03 269.667) 25%,
+    oklch(18% 0.032 269.667) 50%,
+    oklch(14% 0.025 269.667) 100%
+  );
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.6),
+    inset 0 -20px 80px rgba(255, 255, 255, 0.06),
+    inset 20px 0 60px rgba(255, 255, 255, 0.04);
 }
 
 /* Background Cookiebanner */
