@@ -13,8 +13,8 @@ import Link from "next/link";
 import { Icons } from "@/components/icons/Icons";
 
 export const Hero = () => {
-  // Set your target date here (Q2 2026 launch - e.g., April 1, 2026)
-  const targetDate = new Date("2026-04-01T00:00:00").getTime();
+  // Set your target date here (Q2 2026 launch - e.g., May 1, 2026)
+  const targetDate = new Date("2026-05-01T00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState({
     months: 0,
     days: 0,
