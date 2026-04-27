@@ -119,7 +119,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/Users/jochgemvandelft/Sites/aisupporthublanding/generated/prisma",
+      "value": "/Users/jochgemvandelft/Documents/Coding_Projects/aisupporthublanding/aisupporthublanding/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -140,8 +140,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../.env",
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../prisma",
   "clientVersion": "5.15.1",

@@ -22,7 +22,7 @@ export const StickyBanner = () => {
   });
 
   // Set your target date here (Q2 2026 launch - e.g., April 1, 2026)
-  const targetDate = new Date("2026-04-01T00:00:00").getTime();
+  const targetDate = new Date("2026-06-01T00:00:00").getTime();
 
   useEffect(() => {
     const hidden = localStorage.getItem(STORAGE_KEY);
